@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: -6450693549130995861}
   - component: {fileID: -3867023043685039427}
   - component: {fileID: 2458824576671045817}
-  - component: {fileID: 8928270587390715515}
-  - component: {fileID: -8247984031059240168}
+  - component: {fileID: -361552449021238260}
+  - component: {fileID: 8146744720166465060}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8405942348547057932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b69be49b1422a9b4690cba3fc4989424, type: 3}
   m_Name: 
@@ -148,8 +148,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -167,20 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stopRotateTime: 2
   delayTime: 5
---- !u!114 &8928270587390715515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8405942348547057932}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17ab010031d87947b6bd24102eb971f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 2200
---- !u!114 &-8247984031059240168
+--- !u!114 &-361552449021238260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +176,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8405942348547057932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7665353d9df8ae48b097d5ea5949dfa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c032032512802645a4721ab86f883e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 80a52c59c089aca4a92d79992de8db29, type: 2}
+  totalDamage: 0
+--- !u!114 &8146744720166465060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405942348547057932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8a79b8d9eb689408b49a3223e28636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mediumData: {fileID: 11400000, guid: 2afda9808e218ce43b5c98c1518458c2, type: 2}

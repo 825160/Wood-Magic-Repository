@@ -6,12 +6,6 @@ public class OnGroundDelete : MonoBehaviour
     private float currTime = 0;
     public float stopRotateTime = 2;
     public float delayTime = 5;
-    Skill_FastRotate fastRotate;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        fastRotate = GetComponent<Skill_FastRotate>();   
-    }
 
     // Update is called once per frame
     void Update()
@@ -19,10 +13,6 @@ public class OnGroundDelete : MonoBehaviour
         if (isOnGround)
         {
             currTime += Time.deltaTime;
-        }
-        if (currTime > stopRotateTime&&fastRotate!=null)
-        {
-            fastRotate.enabled = false;
         }
         if (currTime > delayTime)
         {
