@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DamageModule : MonoBehaviour
 {
     public float totalDamage;
     private MediumState mediumState;
+
     void Start()
     {
         totalDamage = 0;
@@ -25,9 +27,4 @@ public class DamageModule : MonoBehaviour
         return GetCollisionDamage() * mediumState.currSharpness;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

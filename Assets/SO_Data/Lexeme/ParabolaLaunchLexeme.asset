@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1696f5e06241824aa8eefc843179ce8, type: 3}
-  m_Name: Wood
+  m_Script: {fileID: 11500000, guid: 7a7b7453013b8284dbb9677ecb572375, type: 3}
+  m_Name: ParabolaLaunchLexeme
   m_EditorClassIdentifier: 
-  mediumID: 0
-  mediumName: Wood
-  mediumSort: 0
-  initMediumShape: 0
-  initMass: 1
-  initHardness: 1
-  initSharpness: 0.01
+  magicLexemeIndex: 0
+  lexemeName: 
+  manaCost: 0
+  castDelay: 1
+  speed: 20
+  speedForDamage: 20

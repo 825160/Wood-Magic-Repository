@@ -8,16 +8,22 @@ public class Enemies : MonoBehaviour
     public bool isAlive;
 
     private Rigidbody rb;
-    public GameObject player;
+    private GameObject player;
     public float stopDistance = 10f;
     public float enemySpeed = 3f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+        player = GameObject.Find("Player");
+    }
 
     private void OnEnable()
     {
         isAlive = true;
         currHealth = enemiesData.initHealth;
 
-        rb = GetComponent<Rigidbody>();
+
     }
     // Update is called once per frame
     void FixedUpdate()

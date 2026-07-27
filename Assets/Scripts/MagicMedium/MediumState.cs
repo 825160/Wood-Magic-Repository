@@ -15,6 +15,8 @@ public class MediumState
     public float currHardness;
 
     public float PiercingNum;
+
+    public MediumStage mediumStage;
     public MediumState(MediumData data)
     {
         currMass = data.initMass;
@@ -25,11 +27,8 @@ public class MediumState
 
         //burning = false;
         currSpeed = 0;
-        CaculatePiercingNum();
+        mediumStage = MediumStage.Design;
     }
 
-    public void CaculatePiercingNum()
-    {
-        PiercingNum = currSharpness * currMass * currSpeed * currHardness;
-    }
+
 }

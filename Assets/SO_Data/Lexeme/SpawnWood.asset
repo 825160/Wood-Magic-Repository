@@ -16,4 +16,4 @@ MonoBehaviour:
   lexemeName: 
   manaCost: 0
   castDelay: 1
-  woodPrefab: {fileID: 8405942348547057932, guid: 9b30f3d254bf4534ba91e3cb96f63d85, type: 3}
+  woodPrefab: {fileID: 462484119633640009, guid: 23c290a042bd917409c2d802f86e9857, type: 3}
