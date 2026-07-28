@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         //位移
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * moveInput.y);
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * moveInput.x);
+        transform.Translate(Vector3.right * Time.deltaTime * moveSpeed * moveInput.x);
 
         //判断跳跃
         if (jumpAction.triggered && isOnGround)
