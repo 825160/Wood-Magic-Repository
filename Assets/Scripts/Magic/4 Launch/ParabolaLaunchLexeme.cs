@@ -5,6 +5,7 @@ public class ParabolaLaunchLexeme : LaunchLexeme
 {
     public override void Execute(MagicContent content)
     {
+        content.currMedium.AddComponent<GroundReflect>();
         ExecuteMove<ParabolaMovement>(content);
     }
 }

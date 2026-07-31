@@ -17,4 +17,4 @@ MonoBehaviour:
   manaCost: 0
   castDelay: 0
   speed: 5
-  speedForDamage: 0
+  speedForDamage: 20

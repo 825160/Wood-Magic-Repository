@@ -4,7 +4,7 @@ public class StraightMovement : MonoBehaviour, IMovementModule
 {
     public float speed = 20f;
 
-    public Vector3 direction;
+    protected Vector3 direction;
     protected Rigidbody rb;
 
     protected MediumState state;
@@ -27,16 +27,16 @@ public class StraightMovement : MonoBehaviour, IMovementModule
     {
         rb.linearVelocity = direction * speed;
     }
-    public void StartMove() 
+    public virtual void StartMove() 
     {
         state.mediumStage = MediumStage.OnFly;
     }
 
-    public void StopMove()
+    public virtual void StopMove()
     {
         state.mediumStage = MediumStage.AfterCollion;
         rb.linearVelocity = Vector3.zero;
-        rb.useGravity = true;
+        Destroy(this);
     }
 
     public void InitMovement(Vector3 direction, float speed)

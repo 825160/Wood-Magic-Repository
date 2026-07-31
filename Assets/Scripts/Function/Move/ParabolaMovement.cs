@@ -1,15 +1,26 @@
+using MediumEnum;
 using UnityEngine;
 
 public class ParabolaMovement : StraightMovement
 {
+    private Vector3 velocity;
+    private float gravity;
+    private void Start()
+    {
+        velocity = direction * speed;
+        rb.useGravity = true;
+        rb.linearVelocity = velocity;
+    }
+
    public override void Move()
     {
-        rb.linearVelocity = direction * speed;
-        rb.linearVelocity += Physics.gravity * Time.fixedDeltaTime * 5;
-        if (rb.linearVelocity.y < -20f)
-        {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, -20f, rb.linearVelocity.z);
-        }
+
+    }
+
+    public override void StopMove()
+    {
+        base.StopMove();
+        Destroy(GetComponent<GroundReflect>());
     }
 }
 

@@ -17,6 +17,9 @@ public class MediumState
     public float PiercingNum;
 
     public MediumStage mediumStage;
+
+    public SpinState spinState;
+    public int spinHitEnemyNum;
     public MediumState(MediumData data)
     {
         currMass = data.initMass;
@@ -25,9 +28,12 @@ public class MediumState
         currSharpness = data.initSharpness;
         currHardness = data.initHardness;
 
+        spinState = SpinState.None;
         //burning = false;
         currSpeed = 0;
         mediumStage = MediumStage.Design;
+
+        spinHitEnemyNum = 4;
     }
 
 

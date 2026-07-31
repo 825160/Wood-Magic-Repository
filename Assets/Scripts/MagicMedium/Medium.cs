@@ -5,6 +5,7 @@ public class Medium : MonoBehaviour
     public MediumData mediumData;
     public MediumState mediumState;
 
+
     void Awake()
     {
         mediumState = new MediumState(mediumData);

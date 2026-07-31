@@ -15,35 +15,7 @@ public class MagicHomingMovement : StraightMovement
     // 垂直方向初速度
     public float curveStrength = 30f;
 
-    // 生命周期
-    public float lifeTime = 10f;
-
-
     private Vector3 velocity;
-
-
-    void Start()
-    {
-        FindNearestTarget();
-        Vector3 forward = transform.forward;
-
-
-        // 随机产生一个垂直发射方向的向量
-        Vector3 curveDirection =
-            Vector3.Cross(
-                forward,
-                Random.onUnitSphere
-            ).normalized;
-        curveDirection.y = Mathf.Abs(curveDirection.y);
-
-        // 初速度 = 正方向 + 侧向魔力
-        velocity = curveDirection * curveStrength;
-
-        Destroy(gameObject, lifeTime);
-
-
-    }
-
 
     public override void Move()
     {
@@ -74,6 +46,26 @@ public class MagicHomingMovement : StraightMovement
         
         // 子弹朝向运动方向
         transform.forward = velocity.normalized;
+    }
+
+    public override void StartMove()
+    {
+        FindNearestTarget();
+        Vector3 forward = transform.forward;
+
+
+        // 随机产生一个垂直发射方向的向量
+        Vector3 curveDirection =
+            Vector3.Cross(
+                forward,
+                Random.onUnitSphere
+            ).normalized;
+        curveDirection.y = Mathf.Abs(curveDirection.y);
+
+        // 初速度 = 正方向 + 侧向魔力
+        velocity = curveDirection * curveStrength;
+
+        base.StartMove();
     }
 
     void FindNearestTarget()

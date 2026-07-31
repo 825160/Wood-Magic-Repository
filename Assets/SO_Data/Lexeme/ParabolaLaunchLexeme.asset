@@ -15,6 +15,6 @@ MonoBehaviour:
   magicLexemeIndex: 0
   lexemeName: 
   manaCost: 0
-  castDelay: 1
-  speed: 20
+  castDelay: 0
+  speed: 5
   speedForDamage: 20

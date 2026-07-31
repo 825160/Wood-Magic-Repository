@@ -20,7 +20,7 @@ public class Enemies : MonoBehaviour
 
     private void OnEnable()
     {
-        isAlive = true;
+        isAlive = false;
         currHealth = enemiesData.initHealth;
 
 
